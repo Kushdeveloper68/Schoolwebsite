@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="./Photo/Logo.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16"
+  href="./Photo/Logo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180"
+  href="./Photo/Logo.jpg">
+  <title>BT Login Page</title>
+  <style type="text/css" media="all">
+    body {
+  font-family: Arial, sans-serif;
+  background-image:url('./Photo/vecteezy_abstract-blue-fluid-wave-background_17798503.jpg');
+  background-position:center;
+  background-size:120%;
+  background-repeat:no-repeat;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background-color:transparent;
+  backdrop-filter:blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+  padding: 20px;
+  width: 300px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;}
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form action="/studentlogin" method="post" accept-charset="utf-8" id="loginForm" class="login-form">
+      <h2>Login Student</h2>
+      <div class="input-group">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script src="scripts.js">
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Basic validation logic
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username && password) {
+    alert('Login successful!');
+    // Proceed with actual login logic
+  } else {
+    alert('Please enter both username/email and password.');
+  }
+});
+  </script>
+</body>
+</html>

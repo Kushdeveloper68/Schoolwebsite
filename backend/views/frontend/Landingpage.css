@@ -1,0 +1,50 @@
+* {
+  padding:0;
+  margin:0;
+}
+body ,html {
+  width:100%;
+  height:100%;
+} 
+/* video */ 
+ #background-video {
+   width: 100vw;
+   height: 100vh ;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+}
+/* video end */
+ .logo-img {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+ }
+ .navbar ,.container-fluid{
+   background: transparent;
+    backdrop-filter:blur(5px);
+    color:red;
+ }
+ .navbar-toggler-icon {
+   color:white;
+ }
+ .nav-link {
+   color:white;
+ }
+ header > h1 {
+   text-align: center;
+   color:white;
+ }
+ header > .Admission{
+   align-content:center;
+   margin:0 auto;
+   width:250px;
+   height:60px;
+   border:none;
+   border-radius:5px;
+ }
+ 

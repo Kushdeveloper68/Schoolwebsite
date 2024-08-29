@@ -1,0 +1,55 @@
+* {
+  padding:0;
+  margin:0;
+}
+body ,html {
+  width:100%;
+  height:auto;
+} 
+body {
+  background-image:url('./Photo/');
+  background-repeat:no-repeat;
+  background-image: linear-gradient(228deg, #f783ac 1%, #ed6ea0 10%, #9775fa 17%, rgba(247, 131, 172, 0.81) 30%, #748ffc 47%, #ff8787 62%, #9775fa 66%, rgba(77, 171, 247, 0.83) 78%, #ec8c69 90%);
+}
+/* video */ 
+/*  #background-video {
+   width: 100vw;
+   height: 100vh ;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+} */
+/* video end */
+ .logo-img {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+ }
+ .navbar ,.container-fluid{
+   background: transparent;
+    backdrop-filter:blur(5px);
+    color:red;
+ }
+ .navbar-toggler-icon {
+   color:white;
+ }
+ .nav-link {
+   color:white;
+ }
+ header > h1 {
+   text-align: center;
+   color:white;
+ }
+ header > .Admission{
+   align-content:center;
+   margin:0 auto;
+   width:250px;
+   height:60px;
+   border:none;
+   border-radius:5px;
+ }
+ 

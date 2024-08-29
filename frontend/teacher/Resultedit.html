@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dynamic Form</title>
+  <style type="text/css" media="all">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+    .form-div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    select, input[type="number"], input[type="text"] {
+      width: 160px;
+      height: 40px;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+    .delete-btn {
+      margin-left: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    input[type="submit"], button {
+      width: 140px;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 5px;
+      display: block;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="container">
+      <form action="" method="post" accept-charset="utf-8">
+        <div class="form-div">
+          <label for="class">Class</label>
+          <select name="classes" id="class">
+            <option value="5th">5th</option>
+            <option value="6th">6th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+            <option value="11th">11th</option>
+            <option value="12th">12th</option>
+          </select>
+          <input type="number" name="rollno" placeholder="Rollno." />
+          <input type="number" name="Grnumber" placeholder="GR number" />
+          <input type="text" name="resultstudentname" placeholder="Full Name" />
+        </div>
+        <div id="form-container"></div>
+        <input type="submit" id="submit" value="Submitoo" />
+      </form>
+      <button onclick="addingColumn()">Add Column</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+    function addingColumn() {
+      // Get the container where the new form-div will be added
+      const formContainer = document.getElementById('form-container');
+
+      // Create a new div for the form elements
+      const newFormDiv = document.createElement('div');
+      newFormDiv.classList.add('form-div');
+      
+      // Add the HTML content (form fields + delete button)
+      newFormDiv.innerHTML = `
+        <label for="class">Class</label>
+        <select name="classes" id="class">
+          <option value="5th">5th</option>
+          <option value="6th">6th</option>
+          <option value="7th">7th</option>
+          <option value="8th">8th</option>
+          <option value="9th">9th</option>
+          <option value="10th">10th</option>
+          <option value="11th">11th</option>
+          <option value="12th">12th</option>
+        </select>
+        <input type="number" name="rollno" placeholder="Rollno." />
+        <input type="number" name="Grnumber" placeholder="GR number" />
+        <input type="text" name="resultstudentname" placeholder="Full Name" />
+        <button type="button" class="delete-btn" onclick="deleteColumn(this)">Delete Column</button>
+      `;
+
+      // Append the newly created form-div to the form container
+      formContainer.appendChild(newFormDiv);
+    }
+
+    function deleteColumn(button) {
+      // Remove the parent .form-div of the clicked delete button
+      button.parentElement.remove();
+    }
+  </script>
+</body>
+</html>

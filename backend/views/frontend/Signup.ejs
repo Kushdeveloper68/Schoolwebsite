@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="./Photo/Logo.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16"
+  href="./Photo/Logo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180"
+  href="./Photo/Logo.jpg">
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image:url('./Photo/vecteezy_abstract-background-design-background-texture-design-with_18752866-1.jpg');
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:120%;
+      width:100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-container {
+      background-color:transparent;
+      backdrop-filter:blur(10px);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+      width: 300px;
+      color: white ;
+    }
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 95%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-group button:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Signup Student</h2>
+    <form action="/studentsignup" method="post" accept-charset="utf-8">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="./Termandconditions.ejs">Terms and Conditions</a></label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Signup</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    
+  </script>
+</body>
+</html>
